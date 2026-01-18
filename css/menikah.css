@@ -1,0 +1,1880 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@600&family=Great+Vibes&display=swap");
+
+/* ===== GLOBAL CSS RESET FOR NO OVERFLOW ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== GOLD COLOR TOKENS ===== */
+:root{
+  /* Gold palette - all solid #D1A55C */
+  --gold-shadow:  #D1A55C;
+  --gold-accent:  #D1A55C;
+  --gold-primary: #D1A55C;
+  --gold-highlight: #D1A55C;
+  --gold-sparkle: #D1A55C;
+
+  /* Defaults */
+  --text-body:    #D1A55C;
+  --text-sub:     #D1A55C;
+  --text-title:   #D1A55C;
+}
+
+/* BODY text (everything inherits from here unless overridden) */
+body{
+  color: var(--text-body) !important;
+}
+
+/* TITLES */
+h1, h2{
+  color: var(--text-title) !important;
+}
+
+/* SUB-TITLES */
+h3, h4, h5, h6{
+  color: var(--text-sub) !important;
+}
+
+/* Small supporting text */
+small, .muted, .helper{
+  color: var(--gold-accent) !important;
+}
+
+/* Template-specific classes */
+.title, .section-title { 
+  color: var(--text-title) !important; 
+}
+.subtitle, .section-subtitle { 
+  color: var(--text-sub) !important; 
+}
+.bodytext {
+  color: var(--text-body) !important;
+}
+.waktu {
+  color: var(--text-body) !important;
+}
+.tanggal-hari, .tanggal-angka, .tanggal-bulan {
+  color: var(--text-title) !important;
+}
+.tempat {
+  color: var(--text-body) !important;
+}
+
+/* ===== ANIMATED GOLD LUSTER EFFECT ===== */
+.wedding-day-title {
+  color: #D1A55C !important;
+}
+/* ===== END ANIMATED GOLD LUSTER ===== */
+
+/* Gold foil text (metallic glitter effect) */
+.gold-foil{
+  background: linear-gradient(
+    120deg,
+    var(--gold-shadow) 0%,
+    var(--gold-primary) 18%,
+    var(--gold-sparkle) 35%,
+    var(--gold-highlight) 52%,
+    var(--gold-accent) 70%,
+    var(--gold-sparkle) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.25);
+}
+/* ===== END GOLD TOKENS ===== */
+
+.has-vertically-aligned-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* === HERO TEXT: texture fill using image/options/3.jpg (does NOT affect hero background) === */
+.hero .hero-textured{
+  /* texture image as the "ink" */
+  background-image:
+    url("../image/options/3.jpg"),
+    linear-gradient(180deg, #fffdf6 0%, #f3ead6 55%, #fff6e2 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+
+  /* readable, premium depth without ugly outlines */
+  text-shadow:
+    0 1px 1px rgba(0,0,0,0.28),
+    0 6px 18px rgba(0,0,0,0.22),
+    0 18px 44px rgba(0,0,0,0.18);
+
+  /* crisp on scroll */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* ===== SAMARKAN FONT - WEDDING INVITATION ===== */
+.wedding-invitation-title {
+  font-family: 'Samarkan', 'Playfair Display', serif !important;
+  font-size: 3.5rem !important;
+  letter-spacing: 0.03em;
+  font-weight: normal;
+}
+/* ===== END SAMARKAN ===== */
+
+/* ===== TIMER TRANSLUCENT BACKGROUND ===== */
+#hitungmundur {
+  list-style: none;
+  padding: 20px 10px;
+  margin: 20px auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+@media (max-width: 599px) {
+  #hitungmundur {
+    padding: 15px 5px;
+    margin: 15px auto;
+    gap: 5px;
+  }
+}
+
+#hitungmundur li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+#hitungmundur li.separator {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 700;
+  margin: 15px 2px;
+  line-height: 1;
+  padding: 0 3px;
+}
+
+@media (max-width: 599px) {
+  #hitungmundur li.separator {
+    font-size: 14px;
+    margin: 10px 2px;
+  }
+}
+
+.timer-box {
+  background: rgba(176, 136, 104, 0.121);
+  border-radius: 10px;
+  padding: 12px 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 65px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 599px) {
+  .timer-box {
+    width: 55px;
+    height: 70px;
+    padding: 8px 6px;
+    border-radius: 8px;
+  }
+}
+
+#hitungmundur span {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #b58b6a;
+  line-height: 1.1;
+}
+
+@media (max-width: 599px) {
+  #hitungmundur span {
+    font-size: 18px;
+  }
+}
+
+#hitungmundur p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b58b6a;
+  margin: 3px 0 0 0;
+  font-weight: 600;
+}
+
+@media (max-width: 599px) {
+  #hitungmundur p {
+    font-size: 8px;
+    margin: 2px 0 0 0;
+  }
+}
+/* ===== END TIMER ===== */
+
+/* ===== GOOGLE MAPS FULL WIDTH ===== */
+.section-map {
+  width: 100%;
+  overflow: hidden;
+}
+
+.section-map iframe {
+  display: block;
+  width: 100% !important;
+}
+/* ===== END GOOGLE MAPS ===== */
+.invitation-modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.invitation-modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-card {
+  background: #F3E8D5;
+  border-radius: 30px;
+  padding: 60px 50px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.modal-card{
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* Background image + stronger wash + stronger vignette */
+.modal-card::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background-image:
+    /* +30% washout (was ~0.18 -> now 0.24) */
+    linear-gradient(rgba(238, 230, 225, 0.445), rgba(236, 197, 131, 0.429)),
+
+    /* stronger vignette: starts earlier + darker edges */
+    radial-gradient(circle at center,
+      rgba(0,0,0,0) 38%,
+      rgba(0,0,0,0.55) 100%
+    ),
+
+    /* your image */
+    url("../image/options/gold.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: none;
+}
+
+/* Keep modal content above background */
+.modal-card > *{
+  position: relative;
+  z-index: 1;
+}
+/* Open Invitation button texture background */
+.modal-button{
+  /* image + ~40% wash */
+  background-image:
+    linear-gradient(rgba(236, 248, 4, 0.177), rgba(227, 230, 17, 0.177)),
+    url("../image/options/3.jpg"); /* change to 3.jpeg if needed */
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+  border: none;
+
+  /* keep your existing shape */
+  border-radius: 30px;
+  padding: 16px 40px;
+
+  /* optional: nicer contrast */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.35);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+
+.modal-subtitle {
+  font-family: 'Samarkan', 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 2.7rem;
+  letter-spacing: 0.02em;
+  color: #8a8a8a;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+/* === MODAL TEXTURE FILL (uses image/options/3.jpg as text "ink") === */
+.modal-textured{
+  background-image:
+    url("../image/options/3.jpg"),
+    linear-gradient(180deg, #fffdf6 0%, #f3ead6 55%, #fff6e2 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+
+  /* soft depth, no ugly outline */
+  text-shadow:
+    0 1px 1px rgba(0,0,0,0.18),
+    0 6px 18px rgba(0,0,0,0.14),
+    0 18px 44px rgba(0,0,0,0.10);
+
+  /* crisp */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+/* keep ampersand matching the textured style too */
+.modal-title .modal-ampersand{
+  background-image:
+    url("../image/options/3.jpg"),
+    linear-gradient(180deg, #fffdf6 0%, #f3ead6 55%, #fff6e2 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+
+  text-shadow:
+    0 1px 1px rgba(0,0,0,0.18),
+    0 6px 18px rgba(0,0,0,0.14),
+    0 18px 44px rgba(0,0,0,0.10);
+}
+
+
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  letter-spacing: 0.03em;
+  margin: 15px 0;
+  text-rendering: optimizeLegibility;
+}
+
+.modal-ampersand {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.2rem;
+  color: #b58b6a;
+  font-weight: 700;
+}
+
+.modal-button {
+  background-color: #b58b6a;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  margin-top: 35px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(181, 139, 106, 0.3);
+}
+
+.modal-button:hover {
+  background-color: #a07860;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(181, 139, 106, 0.4);
+}
+
+@media (max-width: 599px) {
+  .modal-card {
+    padding: 40px 30px;
+  }
+
+  
+  .modal-title {
+    font-size: 2.5rem;
+  }
+  
+  .modal-ampersand {
+    font-size: 3rem;
+  }
+}
+/* ===== END POPUP MODAL ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+html { 
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  color: #5a5a5a;
+  line-height: 1.65;
+  background-image: url("../image/bg.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.couple-names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+}
+
+.header-wrapper {
+  padding-bottom: 30px;
+}
+
+.navbar-item {
+  line-height: 38px;
+  font-weight: 600;
+  text-transform: ;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  box-shadow:  ;
+  color: #2b2b2b;
+  font-family: 'Raleway', sans-serif;
+}
+
+.navbar-item.is-active{
+  border-bottom: 2px solid #b58b6a;
+}
+
+.a.navbar-item{
+  color: #2b2b2b;
+}
+
+
+.hero {
+  background-image: url("../image/Shaadi1.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: rgb(238, 3, 3);
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  font-family: 'Raleway', sans-serif;
+}
+
+.hero .title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  font-size: 5rem;
+  padding-bottom: 5px;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  text-rendering: optimizeLegibility;
+}
+
+.hero .subtitle {
+  padding: 35px;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.hero .tempatwaktu {
+  padding-top: 35px;
+  font-size: 1.3rem;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.hero .hero-foot {
+  height: 50px;
+  background: #F3E8D5;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.082);
+}
+
+@media (max-width: 599px) {
+  .hero .hero-foot {
+    height: auto;
+    padding: 8px 0;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  }
+}
+
+.hero .hero-foot .hero-foot--wrapper {
+  margin: 7px auto;
+  height: 50px;
+}
+
+.hero .hero-foot .hero-foot--wrapper .hero-menu-desktop {
+  line-height: 38px;
+  font-weight: 600;
+  text-transform: ;
+  letter-spacing: 0.15em;
+  font-size: 1.5rem;
+  font-family: 'Samarkan', 'Raleway', sans-serif;
+}
+
+@media (max-width: 599px) {
+  .hero .hero-foot .hero-foot--wrapper .hero-menu-desktop {
+    font-size: 0.85rem;
+    line-height: 28px;
+    letter-spacing: 0.08em;
+  }
+}
+
+.hero .hero-foot .hero-foot--wrapper .hero-menu-desktop ul li {
+  display: inline-block;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+@media (max-width: 599px) {
+  .hero .hero-foot .hero-foot--wrapper .hero-menu-desktop ul li {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
+.hero .hero-foot .hero-foot--wrapper .hero-menu-desktop ul li.is-active a {
+  border-bottom: 2px solid #b58b6a;
+  color: #b58b6a;
+}
+
+.hero .hero-foot .hero-foot--wrapper .hero-menu-desktop ul li a {
+  color: #b58b6a;
+  font-family: 'Samarkan', 'Raleway', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.hero .hero-foot .hero-foot--wrapper .hero-menu-desktop ul li a:hover {
+  color: #b58b6a;
+  transition: all .2s ease-in-out;
+  border-bottom: 2px solid #b58b6a;
+}
+/* Footer ribbon background ONLY */
+.footer{
+  background-image: url("../image/options/3.jpg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* keep it local */
+}
+
+/* RSVP buttons: 3.jpg texture + 40% washout */
+#rsvp #rsvpGroomBtn,
+#rsvp #rsvpBrideBtn{
+  position: relative;
+  overflow: hidden; /* keeps overlay inside rounded corners */
+
+  /* 40% washout + image */
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.086)),
+    url("../image/options/3.jpg") !important;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffffff !important;
+  border: 1px solid rgba(176, 137, 104, 0.75) !important;
+}
+
+/* Optional: nicer hover (slightly less wash so texture shows more) */
+#rsvp #rsvpGroomBtn:hover,
+#rsvp #rsvpBrideBtn:hover{
+  background-image:
+    linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)),
+    url("../image/options/3.jpg") !important;
+}
+
+/* ===== Lanterns ONLY for the blessings/#regular-section area ===== */
+
+/* Anchor absolute positioning to this section only */
+#regular-section{
+  position: relative;      /* required */
+  overflow: hidden;        /* keeps lanterns inside the section */
+}
+
+/* Wrapper covering the section’s height */
+#regular-section .regular-lanterns{
+  position: absolute;
+  inset: 0;                /* top/right/bottom/left:0 */
+  pointer-events: none;    /* never block clicks */
+  z-index: 0;              /* behind text */
+}
+
+/* Make sure text/content stays above lanterns */
+#regular-section > *:not(.regular-lanterns){
+  position: relative;
+  z-index: 2;
+}
+
+/* Lantern base styling */
+#regular-section .regular-lanterns .lantern{
+  position: absolute;
+  top: 50px;              /* ALIGNMENT: starts around “With the blessings…” */
+  width: 305px;            /* adjust size */
+  height: auto;
+  opacity: 0.78;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.18));
+}
+
+/* Left + Right positions inside the red boxes */
+#regular-section .regular-lanterns .lantern-left{
+  left: 0;
+  transform: translateX(-15%); /* pushes it slightly off edge like in your red box */
+}
+
+#regular-section .regular-lanterns .lantern-right{
+  right: 0;
+  transform: translateX(15%);
+}
+
+/* Responsive scaling */
+@media (max-width: 1024px){
+  #regular-section .regular-lanterns .lantern{ width: 210px; top: 90px; }
+}
+
+@media (max-width: 768px){
+  #regular-section .regular-lanterns .lantern{ width: 160px; top: 70px; opacity: 0.92; }
+}
+
+@media (max-width: 599px){
+  #regular-section .regular-lanterns{ display: none; }
+}
+
+/* RSVP lanterns: full viewport width but ONLY inside RSVP */
+#rsvp{
+  position: relative;
+  overflow: visible;   /* allows lanterns to extend beyond RSVP */
+}
+
+/* Content above lanterns */
+#rsvp .rsvp-inner{
+  position: relative;
+  z-index: 2;
+}
+
+/* Lantern layer spans the viewport width (not the container) */
+#rsvp .rsvp-lanterns{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+  width: 78vw;
+  transform: translateX(-50%);
+
+  pointer-events: none;
+  z-index: 1;
+  overflow: visible;   /* allows lantern images to extend beyond */
+}
+
+/* lantern base */
+#rsvp .rsvp-lanterns .lantern{
+  position: absolute;
+  top: 20px;
+  width: 340px;
+  height: auto;
+  opacity: 0.5;
+  filter: drop-shadow(0 12px 22px rgba(0,0,0,0.14));
+}
+
+@media (max-width: 768px) {
+  #rsvp .rsvp-lanterns .lantern {
+    opacity: 0.35;
+  }
+}
+
+@media (max-width: 599px) {
+  #rsvp .rsvp-lanterns .lantern {
+    opacity: 0.25;
+  }
+}
+
+#rsvp .rsvp-lanterns .lantern-left{
+  left: -50px;
+  transform: translateX(-50%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 25%, #000 100%);
+          mask-image: linear-gradient(to right, transparent 0%, #000 25%, #000 100%);
+}
+
+#rsvp .rsvp-lanterns .lantern-right{
+  right: -50px;
+  transform: translateX(50%);
+  -webkit-mask-image: linear-gradient(to left, transparent 0%, #000 25%, #000 100%);
+          mask-image: linear-gradient(to left, transparent 0%, #000 25%, #000 100%);
+}
+
+@media (max-width: 480px) {
+  #rsvp .rsvp-lanterns {
+    display: none;
+  }
+}
+
+.space40px{
+  height: 40px;
+}
+
+.space24px{
+  height: 24px;
+}
+
+.main-content {
+  padding-top: 2rem;
+  color: #5a5a5a;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+.main-content .section-dark {
+  background-color: #F4E2E2;
+  background-image: url("../image/options/3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 80px 40px;
+  color: #D1A55C !important;
+}
+
+/* Wedding Day section text colors */
+.main-content .section-dark .section-title {
+  color: #D1A55C !important;
+}
+
+.main-content .section-dark .waktu {
+  color: #D1A55C !important;
+}
+
+.main-content .section-dark .tanggal-hari,
+.main-content .section-dark .tanggal-angka,
+.main-content .section-dark .tanggal-bulan {
+  color: #D1A55C !important;
+}
+
+.main-content .section-dark strong {
+  color: #D1A55C !important;
+}
+
+.main-content .section-dark p {
+  color: #D1A55C !important;
+}
+
+.main-content .section-darker {
+  background-color: #EDD2D1;
+  padding: 80px 40px;
+}
+
+.main-content .section-dark.resume {
+  height: 400px;
+  padding-top: 60px;
+
+}
+
+@media (max-width: 599px) {
+  .main-content .section-dark.resume {
+    padding-top: 75px;
+  }
+}
+
+.main-content .section-dark.resume .title {
+  padding: 20px;
+}
+
+.main-content .section-dark.resume button {
+  border: 2px solid #996E6D;
+  background: #F3E8D5;
+  color: #996E6D;
+  height: 50px;
+  width: 250px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.main-content .section-dark.resume .fa-download {
+  color: #996E6D;
+}
+
+.main-content .section-dark.my-work {
+  padding: 80px 40px;
+}
+
+.main-content .section-cashbac {
+  background-color: rgb(238, 250, 253);
+  padding: 80px 40px; 
+}
+
+@media (max-width: 599px) {
+  .main-content .section-dark.foto-foto {
+    padding: 75px 20px;
+  }
+}
+
+.main-content .section-dark.foto-foto .foto-item {
+  margin-bottom: 1rem;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  border-radius: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
+}
+
+.main-content .section-dark.my-work .work-item:hover {
+  -webkit-transform: scale(1.055) translateY(-2px);
+  transform: scale(1.055) translateY(-2px);
+  -webkit-box-shadow: 0 2px 25px 0 rgba(30, 30, 30, 0.1);
+  box-shadow: 0 2px 25px 0 rgba(30, 30, 30, 0.1);
+}
+
+.section-map {
+  padding: 0 0 0 0 ;
+}
+
+.main-content .section-light {
+  padding: 80px 40px;
+}
+
+.main-content .section-light.regular-section {
+  padding-bottom: 80px;
+}
+
+.main-content .section-light.regular-section .is-larger {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 599px) {
+  .main-content .section-light.regular-section .about-links {
+    text-align: center;
+  }
+}
+
+.main-content .section-light.regular-section .right-image img {
+  border-radius: 11px;
+  margin: 20px;
+  box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
+}
+
+@media (max-width: 599px) {
+  .main-content .section-light.regular-section .right-image img {
+    margin: auto;
+  }
+}
+
+.main-content .section-light.skills {
+  padding: 100px;
+}
+
+@media (max-width: 599px) {
+  .main-content .section-light.skills {
+    padding: 50px 20px 40px 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.main-content .section-light.skills h1 {
+  padding: 10px;
+  font-size: 24px;
+}
+
+.main-content .section-light.contact {
+  padding: 80px;
+}
+
+.main-content .section-light.contact button {
+  width: 100%;
+  color: white;
+  height: 50px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+}
+
+@media (max-width: 599px) {
+  .main-content .section-light.contact {
+    padding: 80px 40px;
+  }
+}
+
+.main-content .section-color.pertanyaan {
+  padding: 100px;
+  background-color: #996E6D;
+  color: white;
+}
+
+.main-content .section-color.pertanyaan .title,
+.main-content .section-color.pertanyaan .subtitle {
+  color: white;
+}
+
+.main-content .section-color.pertanyaan i {
+  font-size: 3rem;
+  padding: 20px;
+}
+
+.title.section-title {
+  font-family: 'Samarkan', 'Playfair Display', serif !important;
+  font-size: 3.5rem !important;
+  letter-spacing: 0.03em !important;
+}
+
+.main-content .section-title {
+  font-family: 'Samarkan', 'Playfair Display', serif;
+  font-weight: 700;
+  color: #2b2b2b;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  letter-spacing: 0.03em;
+  padding-bottom: 60px;
+  text-rendering: optimizeLegibility;
+}
+
+.nama-lengkap {
+  font-family: 'Great Vibes', cursive;
+  color: #2b2b2b;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  padding-bottom: 6px;
+  line-height: 4.2rem;
+  text-rendering: optimizeLegibility;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media (max-width: 599px) {
+  .nama-lengkap {
+    font-size: 2.5rem;
+    line-height: 2.7rem;
+    padding-bottom: 4px;
+  }
+}
+
+.ampersand {
+  font-size: 5rem;
+  font-family: 'Playfair Display', serif;
+  color: #b58b6a;
+  line-height: 5rem;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin: 0 30px;
+  white-space: nowrap;
+}
+
+@media (max-width: 599px) {
+  .ampersand {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    margin: 0 15px;
+  }
+}
+}
+
+.bodytext {
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  color: #5a5a5a;
+  letter-spacing: 0.02em;
+  line-height: 1.65;
+  padding: 0 15px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.waktu {
+  font-size: 1.4rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  color: #5a5a5a;
+  letter-spacing: 0.02em;
+}
+
+.tanggal-angka {
+  font-size: 5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1;
+  color: #2b2b2b;
+  letter-spacing: 0.03em;
+}
+
+.tempat {
+  font-size: 1.4rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  color: #5a5a5a;
+  margin-bottom: 50px;
+  letter-spacing: 0.02em;
+}
+
+@font-face {
+  font-family: "Samarkan";
+  src: url("../fonts/Samarkan.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1.modal-subtitle {
+  font-family: "Samarkan" !important;
+  text-transform: none !important;
+}
+
+
+.has-vertically-align {
+  vertical-align: middle;
+  font-family: 'Samarkan', 'Raleway', sans-serif;
+}
+
+/* TIMER BOXES: 3.jpg texture + reduced washout */
+#hitungmundur .timer-box{
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+
+  /* 10% washout + image (reduced from 30% for more visible image) */
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.12)),
+    url("../image/options/3.jpg") !important;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* optional: make the inside text pop a bit */
+#hitungmundur span,
+#hitungmundur p{
+  position: relative;
+  z-index: 3;
+}
+
+/* Timer label colors */
+#hitungmundur .days_text,
+#hitungmundur .hours_text,
+#hitungmundur .minutes_text,
+#hitungmundur .seconds_text {
+  color: #b58b6a !important;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 10px 10px;
+  line-height: 35px;
+  text-align: center;
+  vertical-align: middle;
+  background: #b58b6a;
+  color: #ffffff;
+}
+/* Ribbon / menu bar background ONLY */
+.hero .hero-foot{
+  background-image: url("../image/options/3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* keep it local to the bar */
+}
+
+/* Optional: keep the inner wrapper transparent so the image shows */
+.hero .hero-foot .hero-foot--wrapper{
+  background: transparent !important;
+}
+
+.footer p {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: block;
+  margin: 0;
+  font-family: 'Samarkan', 'Raleway', sans-serif !important;
+  letter-spacing: 0.03em;
+}
+
+
+.main-content .no-padding-top {
+  padding-top: 0px;
+}
+
+.footer img{
+  margin: 10px 0px 10px 10px;
+  display: inline-block;
+  max-height: 24px;
+  vertical-align: middle;
+}
+
+.footer a .nav-item {
+  color: whitesmoke;
+}
+
+.fa-download {
+  color: #43485c;
+}
+
+.divider {
+  margin: 40px 25px;
+  display: inline-block;
+  max-height: 60px;
+  vertical-align: middle;
+}
+
+.bismillah {
+  margin: 25px;
+  display: inline-block;
+  max-height: 50px;
+  vertical-align: middle;
+}
+
+#toTop {
+  height: 50px;
+  width: 50px;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #b58b6a;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 2rem;
+  box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
+}
+
+#toTop a {
+  color: #ffffff;
+}
+
+#toTop:hover {
+  background-color: #a07860;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #F4E2E2;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px #996E6D;
+  -webkit-box-shadow: inset 0 0 6px #996E6D;
+  background-color: #BC8887;
+}
+
+body.preloader-site {
+  overflow: hidden;
+}
+
+.preloader-wrapper {
+  height: 100%;
+  width: 100%;
+  background: #D8A9A8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+}
+
+.preloader-wrapper .preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 120px;
+}
+
+
+.btn-whatsapp:hover {
+  color: white;
+  background-color: rgba(176, 137, 104, 0.85);
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: 2px solid rgba(176, 137, 104, 0.85);
+  width:  210px;
+  height: 65px;
+  align-items: center;
+  margin: 1rem;
+}
+
+
+.btn-whatsapp {
+  background-color: rgba(176, 137, 104, 0.75);
+  width:  210px;
+  height: 65px;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 10px;  
+  border-left: 1px solid rgba(176, 137, 104, 0.75);
+  border-right: 1px solid rgba(176, 137, 104, 0.75);
+  border-top: 1px solid rgba(176, 137, 104, 0.75);
+  border-bottom: 1px solid rgba(176, 137, 104, 0.75);
+  align-items: center;
+  margin: 1rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+
+.btn-cta:hover {
+  color: #ffffff;
+  background-color: #a07860;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: 2px solid #a07860;
+  width:  210px;
+  height: 65px;
+  align-items: center;
+  margin: 1rem;
+}
+
+.btn-cta {
+  background-color: #b58b6a;
+  width:  210px;
+  height: 65px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  border: 2px solid #b58b6a;
+  border-radius: 10px;
+  align-items: center;
+  margin: 1rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+.cashbac-logo-inline {
+  width: 160px;
+  vertical-align: middle;
+}
+
+.button-download {
+  min-width: 200px;
+  height: 55px;
+  align-items: center;
+  margin: 0.1rem;
+
+}
+
+.voucher-code {
+  height: 55px;
+  max-width: 180px;
+  border: 2px solid #26ade4;
+  border-radius: 10px 0 0 10px  ;
+  font-size: 24px;
+  padding: 15px;
+}
+
+.btn-voucher-code {
+  height: 55px;
+  min-width: 100px;
+  border: 2px solid #26ade4;
+  background-color: #26ade4;
+  border-radius: 0 10px 10px 0;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+  color: white;
+}
+
+.fa-copy {
+  margin-right: 5px;
+}
+.white
+{color:ghostwhite}
+
+
+.dusty-pink {color: #D8A9A8}
+.dusty-pink-lighter {color: #EDD2D1}
+.dusty-pink-lightest {color: #F4E2E2}
+.dusty-pink-darker {color: #BC8887}
+.dusty-pink-darkest {color: #996E6D}
+
+.tile {
+  border-radius: 10px;
+}
+
+
+.foto1 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/Shaadi2.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height: 24rem;
+}
+
+
+.foto2 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/Shaadi3.jpeg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat:no-repeat;
+  min-height: 24rem;
+}
+
+.foto3 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/Shaadi4.jpeg");
+  background-size: cover;
+  background-position: top;
+  background-repeat:no-repeat;
+  min-height: 24rem;
+}
+
+.foto4 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/Shaadi5.jpeg");
+  background-size: cover;
+  background-position: top;
+  background-repeat:no-repeat;
+  min-height: 24rem;
+}
+
+.foto5 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/Shaadi6.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height: 24rem;
+}
+
+
+.foto6 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/samantha-gades-x40Q9jrEVT0-unsplash.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height: 24rem;
+}
+
+
+
+.title-foto {
+  font-size: 18pt;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  text-align: left;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  text-rendering: optimizeLegibility;
+}
+
+.subtitle-foto {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 14pt;
+  margin-top: 15px;
+  text-align: left;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.baraat-divider{
+  display: block;
+  width: 440px;        /* match your divider size */
+  max-width: 105vw;     /* responsive on mobile */
+  height: auto;
+  margin: 20px auto 0; /* space above, centered */
+}
+
+/* Divider wrapper should never block clicks */
+.section-separator{
+  line-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  pointer-events: none;   /* KEY */
+  position: relative;
+  z-index: 1;
+}
+
+/* Move the divider up, but DON'T use negative bottom margin */
+.section-separator .baraat-divider2{
+  display: block;
+  width: 380px;
+  max-width: 110vw;
+  height: auto;
+  margin: -120px auto 0 !important;  /* only negative TOP */
+  transform: translateX(-11px); /* +ve = right, -ve = left */
+  pointer-events: none;              /* KEY */
+}
+
+/* Pull RSVP section upward instead, and keep it on top */
+#rsvp{
+  margin-top: -120px !important;     /* matches what you wanted */
+  position: relative;
+  z-index: 10;                        /* ensures buttons stay visible */
+}
+
+
+
+/* IMPORTANT: your spacer spans currently do nothing unless block */
+.space40px, .space24px{
+  display: block;
+}
+
+.instagram {
+  color: #b58b6a;
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin-top: 0.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* ===== RSVP MODAL ===== */
+.rsvp-modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.rsvp-modal.hidden {
+  display: none;
+}
+
+.rsvp-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.rsvp-modal-content {
+  position: relative;
+  margin: auto;
+  background: #F3E8D5;
+  background-image: url("../image/options/3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 16px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+  max-width: 450px;
+  width: 90%;
+  z-index: 2;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.rsvp-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.rsvp-modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #b58b6a;
+  margin: 0;
+}
+
+.rsvp-modal-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.rsvp-modal-close:hover {
+  color: #b58b6a;
+}
+
+.rsvp-modal-body {
+  padding: 30px;
+}
+
+.rsvp-form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rsvp-form-group label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #b58b6a;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.rsvp-form-group input,
+.rsvp-form-group textarea {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  color: #b58b6a;
+  transition: border-color 0.2s ease;
+}
+
+.rsvp-form-group input:focus,
+.rsvp-form-group textarea:focus {
+  outline: none;
+  border-color: #b58b6a;
+}
+
+.rsvp-error {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.85rem;
+  color: #e74c3c;
+  margin-top: 5px;
+  display: none;
+}
+
+.rsvp-error.show {
+  display: block;
+}
+
+.rsvp-form-actions {
+  margin-top: 25px;
+  display: flex;
+  gap: 10px;
+}
+
+.rsvp-submit-btn {
+  flex: 1;
+  background-color: rgba(176, 137, 104, 0.75);
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+}
+
+.rsvp-submit-btn:hover:not(:disabled) {
+  background-color: rgba(176, 137, 104, 0.85);
+  transform: translateY(-2px);
+}
+
+.rsvp-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.rsvp-success-message,
+.rsvp-error-message {
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 15px;
+}
+
+.rsvp-success-message {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.rsvp-success-message p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.rsvp-error-message {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.rsvp-error-message p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.rsvp-success-message.hidden,
+.rsvp-error-message.hidden {
+  display: none;
+}
+
+@media (max-width: 599px) {
+  .rsvp-modal-header {
+    padding: 20px;
+  }
+  
+  .rsvp-modal-title {
+    font-size: 1.5rem;
+  }
+  
+  .rsvp-modal-body {
+    padding: 20px;
+  }
+}
+
+/* ===== FINAL TIGHT SPACING FIX (baraat + wedding day) ===== */
+
+/* regular section should not vertically center content */
+#regular-section.has-vertically-aligned-content{
+  justify-content: flex-start !important;
+}
+
+/* remove leftover section padding that creates blank areas */
+#regular-section{
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* paragraph-to-names spacing (balanced) */
+#regular-section .bodytext{
+  margin: 0 0 76px 0 !important;
+}
+
+/* names-to-baraat spacing */
+#regular-section .names-wrap{
+  margin: 0 0 6px 0 !important;
+}
+
+/* THIS is the real fix: compensate for transparent padding inside the PNG */
+#regular-section .baraat-divider{
+  display: block;
+  width: 440px;
+  max-width: 100%;
+  height: auto;
+  margin: -95px auto -140px !important; 
+  padding: 0 15px !important;
+  box-sizing: border-box;
+}
+
+@media (max-width: 599px) {
+  #regular-section .baraat-divider{
+    width: 100%;
+    max-width: 100vw;
+    margin: -60px auto -100px !important;
+    padding: 0 10px !important;
+  }
+}
+
+/* pull the Wedding Day (red section) up closer */
+#Waktu{
+  padding-top: 10px !important;
+  margin-top: 0 !important;
+}
+
+.invite-line{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--gold-shadow) !important;
+  padding: 0 15px !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 599px) {
+  .invite-line{
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    padding: 0 10px !important;
+  }
+}
+
+/* --- tighten spacing above invite line + set gold color --- */
+
+/* kill extra spacing from the paragraph above */
+#regular-section .bodytext{
+  margin-bottom: 40px !important;   /* reduce gap above invite line */
+  padding: 0 20px !important;
+  box-sizing: border-box;
+}
+
+@media (max-width: 599px) {
+  #regular-section .bodytext{
+    font-size: 16px;
+    padding: 0 15px !important;
+    margin-bottom: 30px !important;
+  }
+}
+
+.names-wrap{
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 20px 15px !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 599px) {
+  .names-wrap{
+    padding: 15px 10px !important;
+  }
+}
+
+.wedding-of{
+  display: block;
+  margin: 10px 0 10px;     /* space above/below this line */
+  font-family: 'Samarkan', 'Raleway', sans-serif;
+  font-size: 1.4rem;       /* tweak */
+  font-weight: 600;
+  color: var(--gold-shadow); /* #D1A55C */
+}
+
+.names-row{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 599px) {
+  .names-row{
+    gap: 6px;
+  }
+}
+
+/* Top Bappa image placement */
+.hero .bappa-top{
+  position: absolute;
+  top: -280px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: auto;
+  z-index: 5;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .hero .bappa-top {
+    width: 150px;
+    top: -80px;
+  }
+}
+
+@media (max-width: 599px) {
+  .hero .bappa-top {
+    width: 120px;
+    top: -80px;
+    opacity: 1;
+  }
+}
+
+/* Make sure hero-body can anchor absolute positioning */
+.hero .hero-body{
+  position: relative;
+}
+
+/* ===== END FINAL FIX ===== */

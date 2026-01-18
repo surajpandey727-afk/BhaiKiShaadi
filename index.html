@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#BC8887" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WEDDING INVITATION [Vasu] & [Pooja]</title>
+
+    <meta property="og:title" content="Wedding Invitation Groom's Name & Bride's Name - Day, 10 Feb 2026">
+    <meta property="og:description" content="Wedding Invitation Groom's Name & Bride's Name - 10 Feb 2026 at [Venue Name], [City Name]">
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://simple-wedding-invitation.dae.ng/image/samantha-gades-x40Q9jrEVT0-unsplash.png">
+    <meta property="og:url" content="http://simple-wedding-invitation.dae.ng/index.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Bulma Version 0.8.x-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/bulma-tooltip@0.1.5/dist/bulma-tooltip.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/menikah.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css" />
+    <script
+      src="https://kit.fontawesome.com/2828f7885a.js"
+      integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquery.coundown.js"></script>
+    <link rel="icon" type="image/png" href="image/favicon.png" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23064379-20"></script>
+    <!-- Begin Script for Countdown -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-23064379-20');
+    </script>
+    <!-- Begin Script for Countdown -->
+
+    <!-- Github Button -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
+
+  <body>
+    <audio id="bg-music" src="./audio/hoor.mp3" preload="auto" crossorigin="anonymous"></audio>
+    <!-- Begin Invitation Popup Modal -->
+    <div id="invitationModal" class="invitation-modal">
+      <div class="modal-content">
+        <div class="modal-card">
+          <h1 class="modal-subtitle modal-textured samarkan">WEDDING INVITATION & RSVP</h1>
+          <h2 class="modal-title modal-textured">
+            Vasu <span class="modal-ampersand">&</span> Pooja
+          </h2>
+
+          <button id="openInvitation" class="modal-button">Open Invitation</button>
+        </div>
+      </div>
+    </div>
+    <!-- End Invitation Popup Modal -->
+    
+    <!-- Begin Preloader -->
+    <div class="preloader-wrapper">
+      <div class="preloader">
+        <img src="image/favicon.png" alt="Flower" />
+      </div>
+    </div>
+    <!-- End Preloader-->
+    <!-- Begin Header -->
+    <div class="header-wrapper" id="home">
+      <!-- Begin Hero -->
+      <section class="hero is-large">
+        <!-- Lanterns (left/right) -->
+        <div class="hero-lanterns" aria-hidden="true">
+        </div>
+
+        <!-- Begin Mobile Nav -->
+        <nav class="navbar is-transparent is-hidden-desktop">
+          <!-- Begin Burger Menu -->
+          <div class="navbar-brand is-fixed-top">
+            <div class="navbar-burger burger" data-target="mobile-nav">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <!-- End Burger Menu -->
+          <div id="mobile-nav" class="navbar-menu">
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <a class="navbar-item" href="#Waktu">
+                  Time
+                </a>
+              </div>
+              <div class="navbar-item">
+                <a class="navbar-item" href="#lokasi">
+                  Location
+                </a>
+              </div>
+              
+              <div class="navbar-item">
+                <a class="navbar-item" href="#tentang-pasangan">
+                  About Groom and Bride
+                </a>
+              </div>
+              <div class="navbar-item">
+                <a class="navbar-item" href="#rsvp">
+                  RSVP
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- End Mobile Nav -->
+        <!-- Begin Hero Content-->
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <!-- Bappa icon (top center) -->
+            <img class="bappa-top" src="image/bappa.png" alt="Bappa">
+            <h1 class="subtitle wedding-invitation-title hero-textured">WEDDING INVITATION</h1>
+            <h2 class="title hero-textured">Vasu & Pooja</h2>
+            <h4 class="subtitle tempatwaktu hero-textured">
+
+              
+                Tuesday, 10 February 2026 
+                </br>
+                Savana Stays, Resort,
+                </br>
+                Nashik
+              
+            </h4>
+          </div>
+          <!-- Start Countdown -->       
+          <div>
+            <ul id="hitungmundur" >
+              <li class="timer-box"><span class="days">00</span><p class="days_text">Days</p></li>
+              <li class="separator">:</li>
+              <li class="timer-box"><span class="hours">00</span><p class="hours_text">Hrs</p></li>
+              <li class="separator">:</li>
+              <li class="timer-box"><span class="minutes">00</span><p class="minutes_text">Mins</p></li>
+              <li class="separator">:</li>
+              <li class="timer-box"><span class="seconds">00</span><p class="seconds_text">Sec</p></li>
+            </ul>
+            <div class="spasi">
+            </div>
+            <script type="text/javascript">
+              var now = new Date();
+              var day = now.getDate();
+              var month = now.getMonth() + 1;
+              var year = now.getFullYear() + 1;
+          
+              var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
+              var harih = '02/10/2026 17:00:00';
+
+              $('#hitungmundur').countdown({
+                date: harih, // TODO Date format: 07/27/2017 17:00:00
+                offset: +7, // TODO Your Timezone in Hours
+                day: 'Days',
+                days: 'Days',
+                hour: 'Hrs',
+                hours: 'Hrs',
+                minute: 'Mins',
+                minutes: 'Mins',
+                second: 'Sec',
+                seconds: 'Sec'
+              }, function () {
+                alert('Done!');
+              });
+            </script>  
+          </div>
+          <!-- End Countdown -->
+        </div>
+        <!-- End Hero Content-->
+        <!-- Begin Hero Menu -->
+        <div class="hero-foot ">
+          <div class="hero-foot--wrapper">
+            <div class="columns">
+              <div class="column is-12 hero-menu-desktop has-text-centered">
+                <ul>
+                  <li class="is-active">
+                    <a href="#home">Home</a>
+                  </li>
+                  <li>
+                    <a href="#Waktu">Time</a>
+                  </li>
+                  <li>
+                    <a href="#lokasi">Location</a>
+                  </li>
+                  <li>
+                    <a href="#tentang-pasangan">Our Story</a>
+                  <li>
+                    <a href="#rsvp">RSVP</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Hero Menu -->
+      </section>
+      <!-- End Hero -->
+    </div>
+    <!-- End Header -->
+
+    <!-- Begin Main Content -->
+    <div class="main-content">
+    <!-- Begin regular-section-->
+     <section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
+        <!-- Lanterns for blessings section only -->
+        <div class="regular-lanterns" aria-hidden="true">
+         <img class="lantern lantern-left" src="image/lantern-left.png" alt="">
+         <img class="lantern lantern-right" src="image/lantern-right.png" alt="">
+        </div>
+
+        <div data-aos="fade-up" data-aos-easing="linear">        </div>
+
+        <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
+          With the blessings of our families,
+          <br />
+We invite you to join us with your love and good wishes
+          <br />
+as we begin the most beautiful chapter of our lives together.
+          <br />
+          <br />
+It would mean the world to us
+          <br />
+to have you with us at our wedding ceremony.
+        </p>
+
+      <div class="names-wrap" data-aos="fade-up" data-aos-easing="linear">
+  <div class="invite-line">
+    We&rsquo;d be delighted by your presence as we make it official, loudly and happily
+  </div>
+
+  <div class="wedding-of">The wedding of:</div>
+
+  <div class="names-row">
+    <div class="nama-lengkap">Pooja Domb</div>
+    <div class="ampersand">&</div>
+    <div class="nama-lengkap">Vasudev Pandey</div>
+  </div>
+</div>
+
+<img class="baraat-divider" src="image/divider-flowers-leavess.png" alt="Baraat divider">
+</section>
+
+      <!-- End regular-section-->    
+      
+      <!-- Begin Time Section -->
+      <section class="section-dark" id="Waktu">
+        <div class="container">
+
+          <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+            <h1 class="title has-text-centered section-title wedding-day-title">Wedding Day</h1>
+          </div>
+          <div class="columns is-multiline" data-aos="fade-up" data-aos-easing="linear">
+            <div
+              class="column is-4 has-vertically-aligned-content">
+            
+              <p class="is-larger has-text-centered">
+                  <div class="waktu tanggal-hari has-text-centered">Tuesday</div> 
+                  <div class="waktu tanggal-angka has-text-centered">10</div>
+                  <div class="waktu tanggal-bulan has-text-centered">February 2026</div>
+              </p>
+            
+            </div>
+            <div class="column is-4 has-vertically-aligned-content">
+            
+              <p class="waktu is-larger has-text-centered">
+                Wedding Ceremony
+                <br>
+                <strong>1:00 PM IST</strong>
+              </p>
+            
+            </div>
+
+            <div class="column is-4 has-vertically-aligned-content">
+              
+              <h1 class="waktu is-larger has-text-centered">
+                Reception
+                <br>
+                <strong>7:30 PM – 9:30 PM IST</strong>
+              </h1>
+              
+              
+            </div>
+
+          </div>
+        </div>
+    
+          </a>
+        </div>
+      </section>
+      <!-- End Time Content -->
+
+      <!-- Begin Location Section -->
+      <section class="section-darker" id="lokasi" >
+        <div class="container">
+          <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
+            <h1 class="title has-text-centered section-title">Venue</h1>
+            <p class="tempat is-larger has-text-centered">
+              Savana Lake Resort
+              <br>
+              Survey No. 153, Dahegaon,
+              <br>
+              Waldevi Dam Backwaters,
+              <br>
+              Mumbai–Nashik Expressway,
+              <br>
+              Nashik, Maharashtra 422010
+              <br>
+            </p>
+          </div>
+          <div class="section-map" data-aos="fade-up" data-aos-easing="linear">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.711571243591!2d73.65880987522627!3d19.894397481486113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdd927d9f3d4f13%3A0xfeffdd08a7f99aa1!2sSavana%20Lake%20Resort!5e0!3m2!1sen!2sin!4v1768400884528!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="space40px"></div>
+          <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+            <a href=https://maps.app.goo.gl/5QqJMNyWjxmsCvGr5 class="button btn-cta" target="_blank" data-aos="zoom-in">
+              <i class="far fa-directions"></i>
+              &nbsp;&nbsp;Google Maps
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- End Location Content -->
+
+      <!-- Begin About [Bride] and [Groom] -->
+      <section class="section-light regular-section is-fullheight" id="tentang-pasangan">
+        <div class="container">
+          <div class="columns is-multiline">  
+          <div class="column has-text-centered is-12 prolog">
+            <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Our Story</h1>
+            
+
+          
+          <!-- IMAGES -->  
+        <div class=" tile">
+          <div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <article class="tile is-child foto1 notification foto1" data-aos="fade-up" data-aos-easing="linear">
+              <div class="content">
+                <p class="title-foto"></p>
+                <p class="subtitle-foto">
+                  Soft launching with this jpeg @home. <a href="https://google.com" target="_blank"></a>
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child notification foto2" data-aos="fade-up" data-aos-easing="linear">
+              <div class="content">
+                <p class="title-foto">
+                <p class="subtitle-foto">
+                  The "I do" moment!
+                </p>   
+              </div>            
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child notification foto3" data-aos="fade-up" data-aos-easing="linear">
+              <div class="content">  
+                <p class="title-foto">
+                <p class="subtitle-foto">
+                  Walking the aisle into a lifetime together!
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="space24px"></div>
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <article class="tile is-child notification foto6" data-aos="fade-up" data-aos-easing="linear">
+            <div class="content">
+              <p class="subtitle-foto"> Some unrehearsed romance </p>
+            </div>
+          </article>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification foto4" data-aos="fade-up" data-aos-easing="linear">
+            <div class="content">
+              <p class="subtitle-foto">Dublin lights, Diwali hearts</p>
+            </div>
+          </article>
+        </div>
+        <div class="tile is-parent">              
+          <article class="tile is-child notification foto5" data-aos="fade-up" data-aos-easing="linear">
+            <div class="content">
+              <p class="subtitle-foto">Partners in tafri</p>
+            </div>
+          </article>
+        </div>
+      </div> 
+
+      <div class="section-separator">
+  <img
+    class="baraat-divider2"
+    src="image/divider-flowers-leavess.png"
+    alt="Floral divider"
+    loading="lazy"
+  />
+</div>
+
+  <!-- Begin RSVP Content -->
+<section class="section-dark contact" id="rsvp">
+  <!-- Lanterns for RSVP section only -->
+  <div class="rsvp-lanterns" aria-hidden="true">
+    <img class="lantern lantern-left" src="image/lantern-left.png" alt="">
+    <img class="lantern lantern-right" src="image/lantern-right.png" alt="">
+  </div>
+
+  <div class="container rsvp-inner">
+    <div class="columns is-multiline">
+      <div class="column is-12 prolog">
+        <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">RSVP</h1>
+      </div>
+
+      <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+        <p class="h2 subtitle">
+          It would be a true blessing for us
+          <br>
+          to have you by our side.
+          <br>
+          <br>
+          If you plan to attend,
+          <br>
+          we kindly await your confirmation.
+          <br>
+          If you are unable to attend,
+          <br>
+          please know you will be in our thoughts,
+          <br>
+          and we hope to meet on another happy occasion.
+          <br>
+          <br>
+          Stay safe and take good care of your health.
+        </p>
+
+        <button id="rsvpGroomBtn" class="button btn-whatsapp" data-aos="zoom-in">
+          <i class="fab fa-whatsapp"></i>
+          &nbsp;&nbsp;Contact Groom
+        </button>
+
+        <button id="rsvpBrideBtn" class="button btn-whatsapp" data-aos="zoom-in">
+          <i class="fab fa-whatsapp"></i>
+          &nbsp;&nbsp;Contact Bride
+        </button>
+
+        <div class="space40px"></div>
+        <div class="space40px"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End RSVP Content -->
+
+    <!-- Begin Footer -->
+    <div class="footer">
+      <div class="container">
+        <p class="has-vertically-align">With love and gratitude,<br>Vasu & Pooja</p>
+      </div>
+    </div>
+    <!-- End Footer -->
+
+    <!-- RSVP Modal -->
+    <div id="rsvpModal" class="rsvp-modal hidden">
+      <div class="rsvp-modal-overlay"></div>
+      <div class="rsvp-modal-content">
+        <div class="rsvp-modal-header">
+          <h2 class="rsvp-modal-title">Wedding RSVP</h2>
+          <button id="rsvpModalClose" class="rsvp-modal-close" aria-label="Close">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="rsvp-modal-body">
+          <form id="rsvpForm">
+            <div class="rsvp-form-group">
+              <label for="rsvpFullName">Full Name *</label>
+              <input type="text" id="rsvpFullName" name="fullName" required placeholder="Your full name" />
+              <span class="rsvp-error" id="fullNameError"></span>
+            </div>
+            
+            <div class="rsvp-form-group">
+              <label for="rsvpPhone">Phone Number *</label>
+              <input type="tel" id="rsvpPhone" name="phone" required placeholder="+91 XXXXX XXXXX" />
+              <span class="rsvp-error" id="phoneError"></span>
+            </div>
+            
+            <div class="rsvp-form-group">
+              <label for="rsvpGuests">Number of Guests *</label>
+              <input type="number" id="rsvpGuests" name="guests" required min="1" placeholder="1" />
+              <span class="rsvp-error" id="guestsError"></span>
+            </div>
+            
+            <div class="rsvp-form-group">
+              <label for="rsvpMessage">Message (Optional)</label>
+              <textarea id="rsvpMessage" name="message" placeholder="Any special wishes or requirements?" rows="3"></textarea>
+            </div>
+
+            <input type="hidden" id="rsvpSide" name="side" />
+            
+            <div class="rsvp-form-actions">
+              <button type="submit" id="rsvpSubmitBtn" class="rsvp-submit-btn">Submit RSVP</button>
+            </div>
+            
+            <div class="rsvp-success-message hidden" id="rsvpSuccess">
+              <p>Thank you for your RSVP!</p>
+              <p>We're excited to see you at our wedding.</p>
+            </div>
+            
+            <div class="rsvp-error-message hidden" id="rsvpErrorMsg">
+              <p>Something went wrong. Please try again.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End RSVP Modal -->
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/menikah.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        easing: "ease-out",
+        duration: 800,
+      });
+    </script>
+  </body>
+</html>

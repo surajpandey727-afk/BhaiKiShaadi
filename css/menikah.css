@@ -501,10 +501,8 @@ body {
 .navbar-item {
   line-height: 38px;
   font-weight: 600;
-  text-transform: ;
   letter-spacing: 1px;
   font-size: 1rem;
-  box-shadow:  ;
   color: #2b2b2b;
   font-family: 'Raleway', sans-serif;
 }
@@ -579,7 +577,7 @@ body {
 .hero .hero-foot .hero-foot--wrapper .hero-menu-desktop {
   line-height: 38px;
   font-weight: 600;
-  text-transform: ;
+  text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 1.5rem;
   font-family: 'Samarkan', 'Raleway', sans-serif;
@@ -1044,7 +1042,6 @@ body {
     margin: 0 15px;
   }
 }
-}
 
 .bodytext {
   font-size: 18px;
@@ -1469,6 +1466,19 @@ body.preloader-site {
   pointer-events: none;   /* KEY */
   position: relative;
   z-index: 1;
+}
+/* tighten spacing between the ceremony line and the invite-line */
+#regular-section p {
+  margin-bottom: 12px !important; /* reduce this (try 6px / 0px) */
+}
+
+#regular-section .names-wrap {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+#regular-section .invite-line {
+  margin-top: 0 !important;
 }
 
 /* Move the divider up, but DON'T use negative bottom margin */

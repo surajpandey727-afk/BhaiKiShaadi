@@ -1377,7 +1377,7 @@ body.preloader-site {
 
 
 .foto1 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/Shaadi2.jpeg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.189), rgba(48, 47, 47, 0.222)), url("../image/Shaadi2.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -1386,7 +1386,7 @@ body.preloader-site {
 
 
 .foto2 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/Shaadi3.jpeg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.189), rgba(48, 47, 47, 0.288)), url("../image/Shaadi3.jpeg");
   background-size: cover;
   background-position: bottom;
   background-repeat:no-repeat;
@@ -1394,7 +1394,7 @@ body.preloader-site {
 }
 
 .foto3 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/Shaadi4.jpeg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.205), rgba(48, 47, 47, 0.216)), url("../image/Shaadi4.jpeg");
   background-size: cover;
   background-position: top;
   background-repeat:no-repeat;
@@ -1402,7 +1402,7 @@ body.preloader-site {
 }
 
 .foto4 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/Shaadi5.jpeg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.233), rgba(48, 47, 47, 0.233)), url("../image/Shaadi5.jpeg");
   background-size: cover;
   background-position: top;
   background-repeat:no-repeat;
@@ -1410,7 +1410,7 @@ body.preloader-site {
 }
 
 .foto5 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/Shaadi6.jpeg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.219), rgba(48, 47, 47, 0.236)), url("../image/Shaadi6.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -1419,7 +1419,7 @@ body.preloader-site {
 
 
 .foto6 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/samantha-gades-x40Q9jrEVT0-unsplash.png");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.219), rgba(48, 47, 47, 0.203)), url("../image/samantha-gades-x40Q9jrEVT0-unsplash.png");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -1478,7 +1478,8 @@ body.preloader-site {
 }
 
 #regular-section .invite-line {
-  margin-top: 0 !important;
+  margin-top: -50 !important;
+  font-size: 120%;
 }
 
 /* Move the divider up, but DON'T use negative bottom margin */

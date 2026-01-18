@@ -519,8 +519,9 @@ body {
 .hero {
   background-image: url("../image/Shaadi1.jpeg");
   background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  background-size: 100%;
+  background-position: 0px -150px; /* pull UP */
+background-position: 0px -100px; /* right + up */
   background-repeat: no-repeat;
   color: rgb(238, 3, 3);
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -753,6 +754,15 @@ body {
 @media (max-width: 768px) {
   #rsvp .rsvp-lanterns .lantern {
     opacity: 0.35;
+  }
+}
+
+@media (max-width: 768px){
+  body,
+  .hero,
+  .main-content .section-dark,
+  .rsvp-modal-content{
+    background-attachment: scroll !important;
   }
 }
 
@@ -1133,6 +1143,32 @@ h1.modal-subtitle {
 #hitungmundur .seconds_text {
   color: #b58b6a !important;
 }
+
+/* performance hint */
+.hero,
+.section-dark,
+.section-darker,
+.foto1,.foto2,.foto3,.foto4,.foto5,.foto6{
+  will-change: transform;
+}
+
+AOS.init({
+  easing: "ease-out",
+  duration: 800,
+  once: true
+});
+
+/* drop-shadow + mask can be expensive */
+  #regular-section .regular-lanterns .lantern,
+  #rsvp .rsvp-lanterns .lantern{
+    filter: none !important;
+  }
+
+  #rsvp .rsvp-lanterns .lantern-left,
+  #rsvp .rsvp-lanterns .lantern-right{
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
 
 .footer {
   position: relative;
